@@ -2,6 +2,22 @@
   box-sizing: border-box;
 }
 .top-page-header{
-  height: 100px;
+  height: 120px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header-left{
+    // background-color: rgb(252, 221, 221);
+    height: 120px;
+    width: 400px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-style: italic;
+    font-size: 50px;
+  }
+  .nav{
+    margin-right: 40px;
+  }
 }

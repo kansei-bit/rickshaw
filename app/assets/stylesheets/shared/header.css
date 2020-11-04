@@ -4,9 +4,36 @@
 }
 
 .top-page-header {
-  height: 100px;
+  height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-page-header .header-left {
+  height: 120px;
+  width: 400px;
+  margin-left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: italic;
+  font-size: 50px;
+}
+
+.top-page-header .nav {
+  margin-right: 40px;
 }
 /*# sourceMappingURL=header.css.map */
