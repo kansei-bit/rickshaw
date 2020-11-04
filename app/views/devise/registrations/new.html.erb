@@ -2,6 +2,8 @@
 
 <%= form_with model: @shafu, url: shafu_registration_path, local: true do |f| %>
 
+  <%= render 'shared/error_messages', model: f.object %>
+
   <div class="field">
       <label>メールアドレス</label>
       <%= f.email_field :email, autofocus: true, placeholder:"PC・携帯どちらでも可" %>
