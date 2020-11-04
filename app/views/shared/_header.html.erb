@@ -1,0 +1,18 @@
+<%# CSS ・・・assets/stylesheets/shared/header.css まだ書いてない %>
+<header>
+  <div class="top-page-header">
+    <div class="header-logo">
+      <%= link_to image_tag("rickshaw-logo.png"), "/" %>
+    </div>
+    <div class="nav">
+      <ul>
+      <% if shafu_signed_in? %>
+        <li><%= link_to 'ログアウト', destroy_shafu_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_shafu_session_path %></li>
+        <li><%= link_to '新規登録', new_shafu_registration_path %></li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
+</header>

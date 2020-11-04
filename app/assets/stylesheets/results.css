@@ -1,8 +1,10 @@
-.container{
+.container {
   text-align: center;
 }
-.yesterday-result{
+
+.yesterday-result {
   height: 100vh;
   background-image: url("top-page2.png");
   background-size: cover;
 }
+/*# sourceMappingURL=results.css.map */
