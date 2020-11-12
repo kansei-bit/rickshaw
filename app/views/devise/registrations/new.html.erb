@@ -2,6 +2,8 @@
 
 <%= form_with model: @shafu, url: shafu_registration_path, local: true do |f| %>
 
+  <%= render 'shared/error_messages', model: f.object %>
+
   <div class="field">
       <label>メールアドレス</label>
       <%= f.email_field :email, autofocus: true, placeholder:"PC・携帯どちらでも可" %>
@@ -37,7 +39,7 @@
           :birthday,
           use_month_numbers: true,
           prompt:'--',
-          start_year: (Time.now.year - 5),
+          start_year: (Time.now.year - 18),
           end_year: 1930,
           date_separator: '%s'),
         "<span> 年 </span>", "<span> 月 </span>") + "<span> 日 </span>" %>
