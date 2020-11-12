@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Shafu, type: :model do
   describe '俥夫新規登録' do
+    before do
+      @shafu = FactoryBot.build(:shafu)
+    end
+
     it "全ての情報を正しく入力していれば登録できる" do
     end
     it "" do
