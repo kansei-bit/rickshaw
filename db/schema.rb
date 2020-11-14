@@ -15,18 +15,17 @@ ActiveRecord::Schema.define(version: 2020_11_14_073044) do
   create_table "receipts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "customer_name", default: "", null: false
     t.integer "fee"
-    t.date "date"
     t.boolean "cashless"
     t.integer "course_id"
-    t.integer "adult_num_id"
-    t.integer "child_num_id"
+    t.integer "adult_id"
+    t.integer "child_id"
     t.boolean "group"
     t.string "departure_from", default: "", null: false
-    t.string "arrival_at", default: "", null: false
+    t.string "arrive_at", default: "", null: false
     t.time "departure_time"
     t.time "arrival_time"
-    t.integer "overtime_id"
-    t.time "course_time"
+    t.integer "overtime"
+    t.string "course_time"
     t.bigint "shafu_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
