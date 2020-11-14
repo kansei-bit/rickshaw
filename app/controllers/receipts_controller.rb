@@ -1,13 +1,31 @@
 class ReceiptsController < ApplicationController
   before_action :authenticate_shafu!
+
+  def index
+    @receipts = Receipt.order('created_at DESC')
+  end
+
   def new
     @receipt = Receipt.new
   end
 
   def create
     @receipt = Receipt.new(receipt_params)
-    unless @receipt.save
+    if @receipt.save
+      redirect_to :index
+    else
       render :new
+    end
+  end
+
+  def show
+    @receipt = Receipt.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "receipt",
+        template: "receipts/show.html.erb"
+      end
     end
   end
 

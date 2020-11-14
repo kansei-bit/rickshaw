@@ -1,0 +1,6 @@
+<%= link_to '領収書作成', new_receipt_path %>
+<% @receipts.each do |receipt| %>
+<p>
+<%= link_to "#{receipt.customer_name}", "receipts/#{receipt.id}.pdf" %>
+</p>
+<% end %>
