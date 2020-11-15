@@ -1,60 +1,63 @@
 <div class="container">
-  <%= form_with model:@receipt, url: receipts_path, local: true do |f| %>
+  <p class="receipt-title">領収書</p>
+  <%= form_with model:@receipt, url: receipts_path, local: true, class: "form-wrapper" do |f| %>
 
-  <%= render 'shared/error_messages', model: f.object %>
+  <div class="form-contents">
+    <%= render 'shared/error_messages', model: f.object %>
+    
+    <div class="form-content">
+      <%= f.label :customer_name, "お宛名", class: "section-title" %></br>
+      <%= f.text_field :customer_name, placeholder:"山田太郎様", class: "text-field" %>
+    </div>
+    
+    <div class="form-content">
+      <%= f.label :fee, "料金", class: "section-title" %></br>
+      <%= f.text_field :fee, placeholder:"4000", class: "text-field" %></br>
+      <%= f.label :cashless, "キャッシュレス" %>
+      <%= f.check_box :cashless %>
+    </div>
+    
+    <div class="form-content">
+      <%= f.label :date, "乗車日", class: "section-title" %></br>
+      <%= f.date_select Date.today, use_month_numbers: true %>
+    </div>
+    
+    <div class="form-content">
+      <p class="section-title">乗車人数</p>
+      <%= f.label :adult_id, "大人" %>
+      <%= f.collection_select(:adult_id, Adult.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></br>
+      <%= f.label :child_id, "小人" %>
+      <%= f.collection_select(:child_id, Child.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></br>
+      <%= f.label :group, "団体" %>
+      <%= f.check_box :group %>
+    </div>
   
-  <div class="customer-name">
-    <%= f.text_field :customer_name, placeholder:"お宛名" %>
+    <div class="form-content">
+      <p class="section-title">コース</p>
+      <%= f.collection_select(:course_id, Course.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %></br>
+      <%= f.text_field :departure_from, placeholder:"出発地", class: "text-field" %></br>
+      <%= f.text_field :arrive_at, placeholder:"到着地", class: "text-field" %></br>
+      <%= f.label :departure_time, "出発" %>
+      <%= f.time_select :departure_time %></br>
+      <%= f.label :arrival_time, "到着" %>
+      <%= f.time_select :arrival_time %></br>
+      <%= f.text_field :course_time, placeholder:"ご案内時間", class: "text-field" %>
+    </div>
+    
+    <div class="form-content">
+      <p class="section-title">遅延理由</p>
+      <%= f.label(:overtime, "T", value: "T") %>
+      <%= f.radio_button :overtime, "T" %>
+      <%= f.label(:overtime, "J", value: "J") %>
+      <%= f.radio_button :overtime, "J" %>
+      <%= f.label(:overtime, "A", value: "A") %>
+      <%= f.radio_button :overtime, "A" %>
+      <%= f.label(:overtime, "I", value: "I") %>
+      <%= f.radio_button :overtime, "I" %>
+    </div>
+    
   </div>
-  
-  <div class="fee">
-    <%= f.text_field :fee, placeholder:"料金" %>
-    <label>CL</label>
-    <%= f.check_box :cashless %>
-  </div>
-  
-  <div class="date">
-    <label>日付</label>
-    <%= f.date_select Date.today, use_month_numbers: true %>
-  </div>
-  
-  <div class="course">
-    <label>コース</label>
-    <%= f.collection_select(:course_id, Course.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-  </div>
-  
-  <div class="member">
-    <label>大人</label>
-    <%= f.collection_select(:adult_id, Adult.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-    <label>小人</label>
-    <%= f.collection_select(:child_id, Child.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
-    <label>D</label>
-    <%= f.check_box :group %>
-  </div>
-
-  <div class="from-at">
-    <%= f.text_field :departure_from, placeholder:"出発地" %>〜
-    <%= f.text_field :arrive_at, placeholder:"到着地" %>
-  </div>
-  
-  <div class="times">
-    <%= f.time_select :departure_time %>〜
-    <%= f.time_select :arrival_time %>
-    <%= f.text_field :course_time, placeholder:"タイム" %>
-  </div>
-  
-  <div class="over-time">
-    <%= f.label(:overtime, "T", value: "T") %>
-    <%= f.radio_button :overtime, "T" %>
-    <%= f.label(:overtime, "J", value: "J") %>
-    <%= f.radio_button :overtime, "J" %>
-    <%= f.label(:overtime, "A", value: "A") %>
-    <%= f.radio_button :overtime, "A" %>
-    <%= f.label(:overtime, "I", value: "I") %>
-    <%= f.radio_button :overtime, "I" %>
-  </div>
-  
-  <div class="submit">
+  <div class="form-content">
       <%= f.submit "確定する" %>
   </div>
   <% end %>

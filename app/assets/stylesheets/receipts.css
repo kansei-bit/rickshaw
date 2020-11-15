@@ -2,8 +2,50 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #e7e6e6;
+  padding: 40px 0;
+}
+
+.container .receipt-title {
+  margin-bottom: 40px;
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+
+.container .form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  height: 100%;
+  width: 70%;
+  padding: 40px 0;
+}
+
+.container .form-wrapper .form-contents .form-content {
+  margin: 20px 0;
+}
+
+.container .form-wrapper .form-contents .form-content .section-title {
+  font-weight: bold;
+}
+
+.container .form-wrapper .form-contents .form-content .text-field {
+  width: 350px;
+  height: 40px;
 }
 /*# sourceMappingURL=receipts.css.map */
