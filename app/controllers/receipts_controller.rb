@@ -12,7 +12,7 @@ class ReceiptsController < ApplicationController
   def create
     @receipt = Receipt.new(receipt_params)
     if @receipt.save
-      redirect_to :index
+      redirect_to receipts_path
     else
       render :new
     end

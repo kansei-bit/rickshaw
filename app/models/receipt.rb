@@ -5,7 +5,7 @@ class Receipt < ApplicationRecord
   belongs_to :adult
   belongs_to :child
 
-  integer = /\A[1-9][0-9]\z/
+  integer = /\A[1-9][0-9]+\z/
   validates :fee, format: {with: integer, message: 'permit only half-width numbers'}
   with_options numericality: {other_than: 1} do
     validates :course_id
