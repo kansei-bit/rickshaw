@@ -21,10 +21,13 @@ class ReceiptsController < ApplicationController
   def show
     @receipt = Receipt.find(params[:id])
     respond_to do |format|
-      format.html
+      format.html { redirect_to action: :show, format: :pdf, debug: true }
       format.pdf do
         render pdf: "receipt",
-        template: "receipts/show.html.erb"
+        layout: 'pdf.html.erb',
+        template: "receipts/show.html.erb",
+        encoding: 'UTF-8',
+        show_as_html: params.key?('debug')
       end
     end
   end

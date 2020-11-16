@@ -1,2 +1,25 @@
-<%# <%= @receipt.customer_name %> %>
-hello
+<div class="receipt-pdf">
+    <div class="receipt-top">
+      <p><%= "発行日#{@receipt.created_at.year}年#{@receipt.created_at.month}月#{@receipt.created_at.day}日" %></p>
+      <p><%= "No.#{@receipt.id}" %></p>
+    </div>
+  <h2 class="receipt-title">領収書</h2>
+  <div class="receipt-name">
+      <p><%= @receipt.customer_name %></p>
+  </div>
+  <div class="fee-box">
+  <p>金額</p>
+    <p><%= "#{@receipt.fee.to_s.insert(-4,",")}円" %></p>
+  </div>
+  <div class="receipt-letter">
+    <p>但し</p>
+    <p>上記の金額正に受領いたしました</p>
+  </div>
+  <div class="company-info">
+    <p>人力車株式会社</p>
+    <p>〒１２３ー４５６７</p>
+    <p>京都府〇〇市△区□町</p>
+    <p>電話01-2345-6789</p>
+    <p>FAX01-2345-6789</p>
+  </div>
+</div>
