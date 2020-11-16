@@ -1,0 +1,12 @@
+.qrpage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  .qrpage-title{
+    margin-bottom: 30px;
+  }
+  .qr{
+    margin-bottom: 10px;
+  }
+}

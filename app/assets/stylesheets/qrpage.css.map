@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAA;EACL,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,IAAI;CAOd;;AAXD,AAKE,OALK,CAKL,aAAa,CAAA;EACX,aAAa,EAAE,IAAI;CACpB;;AAPH,AAQE,OARK,CAQL,GAAG,CAAA;EACD,aAAa,EAAE,IAAI;CACpB",
+    "sources": [
+        "qrpage.scss"
+    ],
+    "names": [],
+    "file": "qrpage.css"
+}
