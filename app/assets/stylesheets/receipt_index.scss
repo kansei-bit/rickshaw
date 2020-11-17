@@ -1,0 +1,27 @@
+.receipt-index-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .receipt-index-top{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .receipt-index-btn-wrap{
+    margin-bottom: 40px;
+    .receipt-index-btn{
+      padding: 10px 20px;
+      border: 1px solid black;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+  }
+  .receipts-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .receipts-title{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}

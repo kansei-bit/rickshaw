@@ -1,0 +1,96 @@
+.receipt-pdf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  padding: 20px;
+  margin: 40px;
+  border: 8px double #8a8888;
+}
+
+.receipt-pdf .receipt-top {
+  width: 100%;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.receipt-pdf .receipt-top p {
+  margin-bottom: 10px;
+}
+
+.receipt-pdf .receipt-title {
+  font-size: 30px;
+  margin-bottom: 90px;
+}
+
+.receipt-pdf .receipt-name {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 70px;
+}
+
+.receipt-pdf .receipt-name p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: #1d1d1d;
+  border-bottom: 1px solid black;
+}
+
+.receipt-pdf .fee-box {
+  background-color: #dfdede;
+  width: 100%;
+  padding: 0 160px;
+  margin-bottom: 70px;
+  font-size: 30px;
+  font-weight: bolder;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.receipt-pdf .receipt-letter {
+  margin-bottom: 70px;
+}
+
+.receipt-pdf .company-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+/*# sourceMappingURL=receipt_pdf.css.map */

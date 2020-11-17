@@ -1,0 +1,34 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(231, 230, 230);
+  padding: 40px 0;
+  .receipt-title{
+    margin-bottom:40px;
+    font-size: 30px;
+    letter-spacing: 10px;
+  }
+  .form-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    height: 100%;
+    width: 70%;
+    padding: 40px 0;
+    .form-contents{
+      // background-color: rgb(253, 212, 219);
+      .form-content{
+        margin: 20px 0;
+        .section-title{
+          font-weight: bold;
+        }
+        .text-field{
+          width: 350px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}

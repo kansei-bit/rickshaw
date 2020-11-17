@@ -9,6 +9,7 @@
       <ul>
       <% if shafu_signed_in? %>
         <li><%= link_to 'ログアウト', destroy_shafu_session_path, method: :delete %></li>
+        <li><%= link_to '領収書', receipts_path %></li>
       <% else %>
         <li><%= link_to 'ログイン', new_shafu_session_path %></li>
         <li><%= link_to '新規登録', new_shafu_registration_path %></li>

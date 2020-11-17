@@ -1,0 +1,26 @@
+<div class="receipt-index-wrap">
+  <div class="receipt-index-top">
+    <%= "#{current_shafu.lname+current_shafu.fname}のページ" %>
+  </div>
+    <div class="receipt-index-btn-wrap">
+      <div class="receipt-index-btn">
+        <%= link_to '領収書作成', new_receipt_path %>
+      </div>
+      <div class="receipt-index-btn">
+        <%= link_to '今日の成績', "#" %>
+      </div>
+    </div>
+  <div class="receipts-wrap">
+    <div class="receipts">
+      <p class="receipts-title"><%= "#{Date.today.month}月#{Date.today.day}日のご案内一覧" %></p>
+      <% @receipts.each do |receipt| %>
+      <%# 当日の領収書だけを表示 %>
+      <% if Date.today.year == receipt.created_at.year && Date.today.month == receipt.created_at.month && Date.today.day ==receipt.created_at.day %>
+      <div class="receipt">
+        <%= link_to "#{receipt.departure_time.hour}-#{receipt.arrival_time.hour}#{receipt.customer_name}", "receipts/#{receipt.id}.pdf" %>
+      </div>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
