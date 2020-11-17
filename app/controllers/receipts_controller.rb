@@ -1,5 +1,5 @@
 class ReceiptsController < ApplicationController
-  before_action :authenticate_shafu!
+  before_action :authenticate_shafu!, except: :show
 
   def index
     @receipts = Receipt.order('created_at DESC')
