@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_11_14_073044) do
     t.string "arrive_at", default: "", null: false
     t.time "departure_time"
     t.time "arrival_time"
-    t.integer "overtime"
+    t.string "overtime"
     t.string "course_time"
     t.bigint "shafu_id"
     t.datetime "created_at", precision: 6, null: false

@@ -18,4 +18,8 @@ class Receipt < ApplicationRecord
     validates :departure_time
     validates :arrival_time
   end
+  with_options inclusion: [true, false] do
+    validates :cashless
+    validates :group
+  end
 end

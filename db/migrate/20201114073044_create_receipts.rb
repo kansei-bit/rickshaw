@@ -12,7 +12,7 @@ class CreateReceipts < ActiveRecord::Migration[6.0]
       t.string :arrive_at, null: false, default: ""
       t.time :departure_time
       t.time :arrival_time
-      t.integer :overtime
+      t.string :overtime
       t.string :course_time
       t.references :shafu, foreign_key: true
       t.timestamps
