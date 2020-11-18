@@ -45,7 +45,7 @@ rickshaw
 | fname_katakana | string | null: false |
 | birthday | date | null: false |
 
-##l# Association
+### Association
 
 - has_many :receipts
 
@@ -71,7 +71,7 @@ rickshaw
 ### Association
 
 - belongs_to :shafu
--- activerecord
+#### activerecord
 - belongs_to :course
 - belongs_to :adult
 - belongs_to :child
