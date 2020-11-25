@@ -1,6 +1,19 @@
-.yesterday-result {
+.result-wrapper {
   height: 100vh;
-  background-image: url("top-page2.png");
-  background-size: cover;
+}
+
+.result-wrapper .table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.result-wrapper .table .table-header {
+  border: 1px solid black;
+  padding-left: 5px;
+}
+
+.result-wrapper .table .table-item {
+  border: 1px solid black;
+  padding-left: 5px;
 }
 /*# sourceMappingURL=results.css.map */

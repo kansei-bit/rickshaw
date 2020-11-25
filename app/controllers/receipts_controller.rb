@@ -25,7 +25,7 @@ class ReceiptsController < ApplicationController
 
   private
   def receipt_params
-    params.require(:receipt).permit(:customer_name, :fee, :cashless, :date, :course_id, :adult_id, :child_id, :group, :departure_from, :arrive_at, :departure_time, :arrival_time, :course_time, :overtime).merge(shafu_id: current_shafu.id)
+    params.require(:receipt).permit(:customer_name, :fee, :cashless, :course_id, :adult_id, :child_id, :group, :departure_from, :arrive_at, :departure_time, :arrival_time, :course_time, :overtime).merge(shafu_id: current_shafu.id, date:Date.today)
   end
 
   def pdf_maker

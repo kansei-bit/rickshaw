@@ -1,5 +1,16 @@
-.yesterday-result{
+.result-wrapper{
   height: 100vh;
-  background-image: url("top-page2.png");
-  background-size: cover;
+  .table{
+    width: 100%;
+    // background: pink;
+    border-collapse: collapse;
+    .table-header{
+      border: 1px solid black;
+      padding-left: 5px;
+    }
+    .table-item{
+      border: 1px solid black;
+      padding-left: 5px;
+    }
+  }
 }
