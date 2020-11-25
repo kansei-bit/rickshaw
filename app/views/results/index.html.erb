@@ -1,12 +1,20 @@
 <%= render "shared/header" %>
-<div class="yesterday-result">
-  <h1><%= "#{Date.today - 1}の成績" %></h1>
-  <h2>日々の賞金</h2>
-  <p>100:</p>
-  <p>90:</p>
-  <p>80:</p>
-  <p>70:</p>
-  <h2>長いコース</h2>
-  <h2>件数賞</h2>
-  <h2>ニュース</h2>
+<div class="result-wrapper">
+<p><%= "#{Date.today.month}月の業績" %></p>
+<table class="table">
+  <tr>
+    <th class="table-header">日</th>
+    <th class="table-header">総売上</th>
+    <th class="table-header">稼働台数</th>
+    <th class="table-header">台あたり</th>
+  </tr>
+  <% @sums.each_with_index do |sum, i| %>
+  <tr>
+    <td class="table-item"><%= sum[0] %></td>
+    <td class="table-item"><%= sum[1] %></td>
+    <td class="table-item"><%= @how_many_cars[i] %></td>
+    <td class="table-item"><%= sum[1]/@how_many_cars[i] %></td>
+  </tr>
+  <% end %>
+</table>
 </div>

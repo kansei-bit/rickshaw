@@ -16,9 +16,14 @@
       <% @receipts.each do |receipt| %>
       <%# 当日の領収書だけを表示 %>
       <% if Date.today.year == receipt.created_at.year && Date.today.month == receipt.created_at.month && Date.today.day ==receipt.created_at.day %>
+      <%# 俥夫本人の領収書だけを表示 %>
+      <% if receipt.shafu_id == current_shafu.id %>
+      <% i = 1 %>
       <div class="receipt">
-        <%= link_to "#{receipt.id}. #{receipt.customer_name}", "receipts/#{receipt.id}.pdf" %>
+        <%= link_to "#{i}. #{receipt.customer_name}", "receipts/#{receipt.id}.pdf" %>
       </div>
+      <% i += 1 %>
+      <% end %>
       <% end %>
       <% end %>
     </div>
